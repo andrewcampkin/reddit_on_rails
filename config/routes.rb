@@ -4,6 +4,7 @@ RedditOnRails::Application.routes.draw do
   resources :pages
   root :to => "pages#index"
   resources :links
+  resources :comments
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
