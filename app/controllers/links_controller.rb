@@ -12,7 +12,7 @@ class LinksController < ApplicationController
     @link.save
     respond_to do |format|
       
-      format.html {}
+      format.html { redirect_to '/', :notice => 'Link was successfully created.' }
       format.json { render json: @link, status: :created, location: @user }
     end
   end

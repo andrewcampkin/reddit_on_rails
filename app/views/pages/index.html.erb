@@ -1,2 +1,10 @@
 <%= link_to "Add a link", new_link_path %>
+
 <h2>The hurricane page is here!</h2>
+<%= will_paginate @links %>
+<ul>
+  <% @links.each do |link| %>
+    <li><%= link_to link.title, "http://#{link.url}" %></li>
+  <% end %>
+</ul>
+<%= will_paginate @links %>
